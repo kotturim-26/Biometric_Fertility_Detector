@@ -8,9 +8,18 @@ from openai import OpenAI
 from sim_engine import generate_cycle_data
 from logic_layer import detect_ovulation, get_fertility_window
 
-# 1. SETUP
+# 1. SETUP & CREDENTIAL MANAGEMENT
 load_dotenv()
-client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=os.getenv("OPENROUTER_API_KEY"))
+
+# Check local .env first; fallback to Streamlit Cloud secrets if deployed
+API_KEY = os.getenv("OPENROUTER_API_KEY")
+if not API_KEY and "OPENROUTER_API_KEY" in st.secrets:
+    API_KEY = st.secrets["OPENROUTER_API_KEY"]
+
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=API_KEY
+)
 
 st.set_page_config(page_title="CyclicSense AI | Oura Integration Demo", layout="wide")
 

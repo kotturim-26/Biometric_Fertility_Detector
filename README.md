@@ -4,7 +4,8 @@
 
 A cycle-aware fertility tracking prototype that replaces the calendar method with real-time biometric signal processing. Built to address the **7.32-day mean absolute error (MAE)** in ovulation prediction for users with irregular cycles ([Meng et al., JMIR 2025](https://doi.org/10.2196/59550)), with a target reduction to **≤1.5-day MAE**.
 
-![Demo](assets/demo.png)
+<img width="795" height="408" alt="image" src="https://github.com/user-attachments/assets/88d32792-ad14-4985-921e-28a94a173f94" />
+
 
 ---
 
@@ -87,6 +88,9 @@ streamlit run app.py
 ```
 
 ---
+
+## Publicly Deployed Web App Link
+https://biometricfertilitydetector-egs79ogayhfvsomvn2vfe8.streamlit.app/
 
 ## Current Status & Roadmap
 

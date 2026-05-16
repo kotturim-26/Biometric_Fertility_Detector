@@ -109,4 +109,4 @@ if st.button("View Methodology & Algorithm Reasoning"):
     except Exception as e:
         st.error("Model reasoning is currently unavailable. Review the code logic for deterministic calculations.")
 
-st.caption("Built by Maanasvi Kotturi | UT Austin Biomedical Engineering | Prototype for NEA Fertility")
+st.caption("Built by Maanasvi Kotturi | UT Austin Biomedical Engineering | Prototype")
